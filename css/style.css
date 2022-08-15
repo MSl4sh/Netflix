@@ -10,17 +10,16 @@ header{
     justify-content: space-between;
     
 }
-@keyframes appear{
-    from{
-        background:linear-gradient(180deg, rgba(19, 19, 19,0) 50%, rgba(29, 29, 29,0) 99%);
-        
-    }
-    to{
-        background:linear-gradient(180deg, rgba(19, 19, 19,1) 50%, rgba(29, 29, 29,1) 99%);
-    }
+
+
+
+#nav1{
+    
+    animation-name: disappear;
+    animation-duration: 0.2s;
+    transition: 0.2s;
 
 }
-
 @keyframes disappear{
     from{
         background:linear-gradient(180deg, rgba(19, 19, 19,1) 50%, rgb(29, 29, 29) 99%);
@@ -30,18 +29,21 @@ header{
     }
 
 }
-#nav1{
-    
-    animation-name: disappear;
-    animation-duration: 0.2s;
-    transition: 0.2s;
-
-}
 #nav2{
     background:linear-gradient(180deg, rgba(19, 19, 19,1) 50%, rgb(29, 29, 29) 99%);
     animation-name: appear;
     animation-duration: 0.2s;
     transition: 0.2s;
+}
+@keyframes appear{
+    from{
+        background:linear-gradient(180deg, rgba(19, 19, 19,0) 50%, rgba(29, 29, 29,0) 99%);
+        
+    }
+    to{
+        background:linear-gradient(180deg, rgba(19, 19, 19,1) 50%, rgba(29, 29, 29,1) 99%);
+    }
+
 }
 
 body{
@@ -97,7 +99,8 @@ header ul li:hover{
     background-image: url(/img/friends.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1250px;
+    height: 120vh;
+    width:100vw;
     box-shadow: rgba(19, 19, 19, 1) 0px -150px 60px -50px inset;
     
 }
@@ -195,7 +198,7 @@ button img{
     overflow-x: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
-    overflow: hidden;
+    
 }
 .scrollRight{
     position: absolute;
@@ -238,6 +241,8 @@ button img{
     font-weight: 700;
     margin-bottom: 20px;
 }
+
+
 .series img{
     
     width: 17%;
@@ -245,6 +250,7 @@ button img{
     transition: all ease-out 0.3s;
     display: inline-block;
     z-index: 1;
+    border-radius: 5px;
     
 
     
@@ -254,10 +260,10 @@ button img{
 }
 
 .series img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: all ease-out 0.3s;
     cursor:pointer;
-    transform-origin: bottom left;
+    transform-origin: bottom center;
     z-index: 2;
     
 
@@ -302,3 +308,24 @@ button img{
     
 }
 
+@media only screen and (max-width: 425px) {
+    .background{
+        background-image: url(/img/friends.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+        width: 100vw;
+        box-shadow: rgba(19, 19, 19, 1) 0px -150px 60px -50px inset;
+        
+    }
+    .description{
+        margin-top: 25px;
+        width: 75%;
+        color:white;
+        font-family: sans-serif;
+        font-weight: 650;
+        font-size: 1.5rem;
+        text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        
+    }
+}
