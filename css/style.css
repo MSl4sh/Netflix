@@ -96,7 +96,7 @@ header ul li:hover{
 }
 
 .background{
-    background-image: url(/img/friends.webp);
+    background-image: url(../img/friends.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 120vh;
